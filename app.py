@@ -27,15 +27,32 @@ X_valids=pandas.read_csv("X_valid.csv")
 X_valids=X_valids.iloc[:,1:]
 
 
-model=pickle.load(open('Model_LR2.pkl', 'rb'))
-
-
 
 @app.get("/")
 def greet():
     return {"Hello World!"}
 
-
+@app.post("/predict")
+def predictx(req: Client):
+    
+    i_client=req.Number
+    """
+    preg=req.pregnacies
+    glucose=req.glucose
+    bp=req.bp
+    skinthickness=req.skinthickness
+    insulin=req.insulin
+    bmi=req.bmi
+    dpf=req.dpf
+    age=req.age
+    features=list([preg,glucose,bp,skinthickness, insulin,bmi,dpf,age])
+    """
+    predict=rf_model.predict(X_valids.loc[[i_client]])
+    probab=rf_model.predict_proba(X_valids.loc[[i_client]])
+    if (predict==1):
+        return {"ans":"Your credit is approuved with {} probability".format(probab[0][1])}
+    else:
+        return {"ans":"Your credit is rejected with {} probability".format(probab[0][0])}
 
 
     
