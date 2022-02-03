@@ -13,4 +13,5 @@ Numpy
 scikit-learn
 requests
 scipy
+pandas
 
