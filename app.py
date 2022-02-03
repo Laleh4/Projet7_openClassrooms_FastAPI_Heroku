@@ -9,6 +9,7 @@ from fastapi import FastAPI
 import uvicorn
 import pickle
 from BankNotes import BankNote
+from Clients import Client
 import pandas
 
 
