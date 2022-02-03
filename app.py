@@ -9,6 +9,7 @@ from fastapi import FastAPI
 import uvicorn
 import pickle
 from BankNotes import BankNote
+import pandas
 
 
 
@@ -21,6 +22,9 @@ seuil_final=seuil_final[0,0]
 rf_grid=pickle.load(f)
 rf_model = rf_grid.best_estimator_
 f.close()
+
+X_valids=pandas.read_csv("X_valid.csv")
+X_valids=pandas.X_valids.iloc[:,1:]
 
 
 model=pickle.load(open('Model_LR2.pkl', 'rb'))
