@@ -8,7 +8,7 @@ Created on Mon Jan 31 09:43:41 2022
 from fastapi import FastAPI
 import uvicorn
 import pickle
-from BankNotes import BankNote
+#from BankNotes import BankNote
 from Clients import Client
 import pandas
 
