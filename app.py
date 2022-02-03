@@ -24,7 +24,7 @@ rf_model = rf_grid.best_estimator_
 f.close()
 
 X_valids=pandas.read_csv("X_valid.csv")
-X_valids=pandas.X_valids.iloc[:,1:]
+X_valids=X_valids.iloc[:,1:]
 
 
 model=pickle.load(open('Model_LR2.pkl', 'rb'))
