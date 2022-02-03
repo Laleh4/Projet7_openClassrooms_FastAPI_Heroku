@@ -36,7 +36,7 @@ def greet():
     return {"Hello World!"}
 
 
-
+"""
 @app.post("/predict")
 def predictx(req: Client):
     
@@ -58,7 +58,7 @@ def predictx(req: Client):
         return {"ans":"Your credit is approuved with {} probability".format(probab[0][1])}
     else:
         return {"ans":"Your credit is rejected with {} probability".format(probab[0][0])}
-    
+ """   
     
 
     
