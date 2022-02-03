@@ -14,7 +14,13 @@ from BankNotes import BankNote
 
 app=FastAPI()
 
-
+f=open('data_Milestone3.pkl', 'rb')
+val_final=pickle.load(f)
+seuil_final=pickle.load(f)
+seuil_final=seuil_final[0,0]
+rf_grid=pickle.load(f)
+rf_model = rf_grid.best_estimator_
+f.close()
 
 
 model=pickle.load(open('Model_LR2.pkl', 'rb'))
