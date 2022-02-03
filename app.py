@@ -9,8 +9,8 @@ from fastapi import FastAPI
 import uvicorn
 import pickle
 #from Clients import Client
-import pandas as pd
-import numpy as np
+#import pandas as pd
+#import numpy as np
 
 
 
