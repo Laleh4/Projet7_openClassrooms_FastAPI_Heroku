@@ -8,7 +8,7 @@ Created on Mon Jan 31 09:43:41 2022
 from fastapi import FastAPI
 import uvicorn
 import pickle
-from Clients import Client
+#from Clients import Client
 import pandas as pd
 import numpy as np
 
